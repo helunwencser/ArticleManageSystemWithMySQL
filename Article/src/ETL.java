@@ -123,10 +123,11 @@ public class ETL {
 	    
 	    DocumentBuilder builder = factory.newDocumentBuilder();
 	    
-	    Document document = builder.parse(ClassLoader.getSystemResourceAsStream("article.xml"));    
+	    //Document document = builder.parse(ClassLoader.getSystemResourceAsStream("article.xml"));    
 	    
-	    //Document document = builder.parse(new FileInputStream(new File("article.xml")));
-	    NodeList nodeList = document.getDocumentElement().getChildNodes();
+	    Document document = builder.parse(new FileInputStream(new File("article.xml")));
+
+        NodeList nodeList = document.getDocumentElement().getChildNodes();
 
 	    int count = 0;
 	    for(int i = 0; i < nodeList.getLength(); i++){

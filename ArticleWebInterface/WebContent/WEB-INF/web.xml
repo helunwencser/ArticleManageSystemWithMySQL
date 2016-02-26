@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>ArticleWebInterface</display-name>
+    <servlet>
+        <servlet-name>ListCoAuthor</servlet-name>
+        <servlet-class>ListCoAuthor</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListPublication</servlet-name>
+        <servlet-class>ListPublication</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListPublicationOfAuthor</servlet-name>
+        <servlet-class>ListPublicationOfAuthor</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListPublicationByKeywords</servlet-name>
+        <servlet-class>ListPublicationByKeywords</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListPublicationOfTwoAuthors</servlet-name>
+        <servlet-class>ListPublicationOfTwoAuthors</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ListCoAuthor</servlet-name>
+        <url-pattern>/listCoAuthor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListPublication</servlet-name>
+        <url-pattern>/listPublication</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListPublicationOfAuthor</servlet-name>
+        <url-pattern>/listPublicationOfAuthor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListPublicationByKeywords</servlet-name>
+        <url-pattern>/listPublicationByKeywords</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListPublicationOfTwoAuthors</servlet-name>
+        <url-pattern>/listPublicationOfTwoAuthors</url-pattern>
+    </servlet-mapping>
+ 
+</web-app>

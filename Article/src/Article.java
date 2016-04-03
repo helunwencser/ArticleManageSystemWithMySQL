@@ -18,10 +18,6 @@ public class Article {
 	public Article(){
 		this.authors = new ArrayList<String>();
 	}
-	
-	public void print(){
-		System.out.println(this.mdate + " " + this.title);
-	}
 
 	public String getTitle() {
 		return title;
@@ -116,5 +112,21 @@ public class Article {
 
 	public void setEe(String ee) {
 		this.ee = ee;
+	}
+	
+	public String toString() {
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append("title: " + this.title + "\t");
+		stringBuffer.append("mdate: " + this.mdate + "\t");
+		stringBuffer.append("key: " + this.key + "\t");
+		stringBuffer.append("authors: " + this.getAuthorsToString() + "\t");
+		stringBuffer.append("pages: " + this.pages + "\t");
+		stringBuffer.append("year: " + this.year + "\t");
+		stringBuffer.append("volume: " + this.volume + "\t");
+		stringBuffer.append("journal: " + this.journal + "\t");
+		stringBuffer.append("number: " + this.number + "\t");
+		stringBuffer.append("url: " + this.url + "\t");
+		stringBuffer.append("ee: " + this.ee);
+		return stringBuffer.toString();
 	}
 }

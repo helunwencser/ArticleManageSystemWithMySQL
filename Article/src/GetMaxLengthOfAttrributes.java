@@ -16,17 +16,16 @@ import org.xml.sax.helpers.DefaultHandler;
  * */
 
 /**
- * This class extracts, transfers, and loads data from dblp.xml
- * into MySQL database. It uses SAX as the parser since it's an
- * event based parser and doesn't need to load all dblp.xml into
- * memory. In consideration of the volume of data set, we choose
+ * This class gets the max length for each article's attributes. 
+ * It uses SAX as the parser since it's an event based parser 
+ * and doesn't need to load all dblp.xml into memory. In 
+ * consideration of the volume of data set, we choose
  * SAX as parser instead of DOM.
  * Reference: 
  * https://www.javacodegeeks.com/2013/05/parsing-xml-using-dom-sax-and-stax-parser-in-java.html#sax
  * */
 
-public class SAXETL {
-	
+public class GetMaxLengthOfAttrributes {
 	public static void main(String[] args) {
 		if(args.length == 0) {
 			System.out.println("Please provide the file path for xml file");
@@ -36,8 +35,9 @@ public class SAXETL {
 	    SAXParser parser;
 		try {
 			parser = parserFactor.newSAXParser();
-			SAXHandlerForParsing handler = new SAXHandlerForParsing();
+			SAXHandlerForGettingAttributesLength handler = new SAXHandlerForGettingAttributesLength();
 		    parser.parse(new FileInputStream(new File(args[0])), handler);
+		    System.out.println(handler.getAttributeLength());
 		} catch (ParserConfigurationException | SAXException | IOException e) {
 			e.printStackTrace();
 		}
